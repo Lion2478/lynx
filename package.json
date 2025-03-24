@@ -2,23 +2,33 @@
   "name": "rspeedy-project",
   "version": "0.0.0",
   "type": "module",
+  "private": true,
+  "workspaces": [
+    "."
+  ],
   "scripts": {
-    "build": "rspeedy build",
     "dev": "rspeedy dev",
-    "preview": "rspeedy preview"
+    "build": "rspeedy build", 
+    "preview": "rspeedy preview",
+    "server": "node server/index.js",
+    "start": "npm run server"
   },
   "dependencies": {
-    "@lynx-js/react": "^0.105.1"
+    "@lynx-js/react": "^0.105.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@lynx-js/qrcode-rsbuild-plugin": "^0.3.4",
-    "@lynx-js/react-rsbuild-plugin": "^0.9.1",
     "@lynx-js/rspeedy": "^0.8.3",
+    "@lynx-js/react-rsbuild-plugin": "^0.9.1",
+    "@lynx-js/qrcode-rsbuild-plugin": "^0.3.4",
     "@lynx-js/types": "^3.2.0",
     "@types/react": "^18.3.18",
     "typescript": "~5.7.3"
   },
   "engines": {
-    "node": ">=18"
+    "node": ">=18.0.0"
   }
 }
